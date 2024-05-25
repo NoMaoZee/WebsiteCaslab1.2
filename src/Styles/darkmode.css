@@ -1,0 +1,58 @@
+/* General Styles */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Navbar Custom Styles */
+.navbar-custom .fcontainer {
+  background-color: white;
+  color: #232323;
+}
+
+.navbar-custom .navbar-brand,
+.navbar-custom .nav-link .fcontainer {
+  color: #232323;
+}
+
+.navbar-custom .toggle-button {
+  padding: 5px 10px;
+  font-size: 14px;
+  margin-bottom: 0;
+  cursor: pointer;
+  background-color: #2f2f2f;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.navbar-custom .toggle-button:hover {
+  background-color: #112455;
+}
+
+/* Dark Mode Styles */
+.dark-mode .fcontainer .answer-input {
+  background-color: #2f2f2f;
+  color: white;
+}
+
+.dark-mode .navbar-custom {
+  background-color: #232323;
+  color: white;
+}
+
+.dark-mode .navbar-custom .navbar-brand,
+.dark-mode .navbar-custom .nav-link {
+  color: white;
+}
+
+.dark-mode .navbar-custom .toggle-button {
+  background-color: #f8f9fa;
+  color: #232323;
+}
+
+.dark-mode .navbar-custom .toggle-button:hover {
+  background-color: #e2e6ea;
+}

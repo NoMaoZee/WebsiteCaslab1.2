@@ -1,0 +1,367 @@
+@media (max-width: 992px) {
+  .navigation,
+  .navigation > li,
+  .navigation > li > a {
+    font-size: 0.9rem; /* Adjust as needed for smaller screens */
+  }
+}
+
+/* For screens smaller than 480px */
+@media (max-width: 480px) {
+  .navigation,
+  .navigation > li,
+  .navigation > li > a {
+    font-size: 0.7em; /* Adjust as needed for even smaller screens */
+  }
+}
+
+::-webkit-scrollbar {
+  width: 7px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #aaaaaa;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #282c34;
+  border-radius: 30px;
+}
+
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 4vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: #ffffff;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:wght@400;500;700;900&display=swap");
+
+*,
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Be Vietnam Pro", sans-serif;
+  position: relative;
+}
+
+.fcontainer {
+  width: 100%;
+  margin: 0 auto;
+  height: 100vh;
+  background-color: white;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 20px;
+  padding: 15px;
+  height: 25px; /* Sesuaikan tinggi header sesuai kebutuhan */
+  background-color: #ffffff;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* Definisikan bayangan dengan offset-x, offset-y, blur-radius, dan warna */
+}
+
+.brand {
+  display: flex;
+  flex-direction: row;
+  font-size: 1.5rem;
+  padding: 20px;
+  text-transform: capitalize;
+}
+
+.firstname {
+  color: #464646;
+  font-weight: 800;
+}
+
+.lastname {
+  color: #aaaaaa;
+  font-weight: 600;
+}
+
+.navigation {
+  margin-top: 10px;
+  display: inline;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.navigation > li {
+  text-transform: capitalize;
+  list-style-type: none;
+  padding: 15px;
+}
+
+.navigation > li > a {
+  color: #222222;
+  font-size: 1em;
+  font-weight: 600;
+  text-decoration: none;
+  flex-shrink: 1; /* Allow shrinking */
+  min-width: fit-content; /* Prevent excessive shrinking */
+}
+
+#hero {
+  text-align: center;
+  height: 750px;
+  display: center;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+}
+
+.quote {
+  text-align: center;
+}
+
+.subkata p {
+  text-align: center;
+  font-family: "Be Vietnam Pro", sans-serif;
+  font-size: 55px;
+  font-weight: bold;
+  margin-bottom: -50px; /* Mengubah jarak antara teks dengan elemen di bawahnya */
+  margin-top: 50px; /* Menambahkan jarak di atas teks */
+}
+
+.subkata {
+  margin-bottom: 15px;
+
+  /* Menambahkan jarak bawah antara subkata dengan input-section */
+}
+
+.input-section {
+  margin-top: 30px; /* Menambahkan jarak atas antara input-section dengan subkata */
+}
+
+.container {
+  width: 536px;
+  height: 600px;
+  margin: auto;
+  padding: 20px;
+  position: relative;
+}
+
+.input-section,
+.answer-section {
+  width: 100%;
+  margin-bottom: 10px;
+  position: relative;
+  display: flex; /* Tambahkan display flex */
+  flex-direction: column; /* Kolom input dan output akan ditumpuk vertikal */
+}
+
+.question-input {
+  width: 100%;
+  max-height: 150px; /* Menambahkan tinggi maksimum */
+  overflow-y: auto; /* Menambahkan scroll jika teks melebihi tinggi maksimum */
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  color: #222222;
+  margin-bottom: 10px;
+  word-wrap: break-word; /* Memaksa teks untuk mematahkan kata-kata */
+}
+
+.calculate-button {
+  align-self: flex-end; /* Letakkan tombol ke kanan */
+  height: 42px;
+  padding: 0 15px;
+  border: none;
+  border-radius: 4px;
+  background-color: #222222;
+  color: #ffffff;
+  font-size: 16px;
+  cursor: pointer;
+  transform: translateY(-128%) translateX(-2%);
+  margin-bottom: -50px;
+}
+
+.answer-section {
+  flex-grow: 1; /* Kolom output akan mengisi sisa ruang yang tersedia */
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  color: #222222;
+  display: flex; /* Tambahkan display flex */
+  flex-direction: column; /* Output akan ditumpuk vertikal */
+}
+
+.answer-input {
+  flex-grow: 1; /* Output akan mengisi sisa ruang yang tersedia */
+  overflow-y: auto; /* Tambahkan scroll jika teks melebihi tinggi */
+  word-wrap: break-word; /* Memaksa teks untuk mematahkan kata-kata */
+}
+
+.answer-header {
+  width: auto;
+  height: 20px;
+  background-color: #2f2f2f;
+  padding: 15px;
+  border-radius: 8px 8px 0px 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.answer-header h2 {
+  color: #f7f7f7;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* Footer Section */
+
+footer {
+  width: 100%;
+  margin-top: auto;
+  padding: 10px;
+  background: #333;
+  text-align: center;
+  color: #f7f7f7;
+  font-size: 10px;
+}
+
+.judul {
+  font-size: 25px;
+  margin-bottom: 5px;
+  font-family: "Be Vietnam Pro", sans-serif;
+  font-weight: bold;
+}
+
+.footer-icons {
+  margin-bottom: 15px;
+}
+
+.footer-icons a {
+  margin: 0 0.5rem;
+}
+
+.footer-icons svg {
+  fill: #ffffff;
+}
+
+.footer-icons a:hover svg {
+  fill: #ffffff;
+}
+
+/* Photo Section */
+.photo {
+  display: flex;
+  justify-content: space-between; /* Memastikan design1 dan design3 berada di sisi kiri dan kanan */
+  align-items: flex-start; /* Mengatur posisi vertikal objek dalam .photo ke atas */
+  flex-wrap: wrap;
+}
+
+.design2 {
+  flex-shrink: 1; /* Mencegah objek mengurangi ukuran ketika ruang terbatas */
+  max-width: 100%;
+}
+.design3 {
+  flex-shrink: 1; /* Mencegah objek mengurangi ukuran ketika ruang terbatas */
+  max-width: 100%;
+}
+
+.design2 {
+  /* Mengatur jarak antara design2 dan desi n1 */
+  align-self: flex-start; /* Mengatur posisi objek ke atas */
+  transform: translateX(0%) translateY(15%); /* Anda dapat menyesuaikan margin sesuai kebutuhan untuk menentukan posisi design2 */
+  order: 2;
+  flex: 1;
+}
+
+.design3 {
+  align-self: center; /* Mengatur posisi objek ke tengah */
+  transform: translateX(0%) translateY(0%); /* Anda dapat menyesuaikan margin sesuai kebutuhan untuk menentukan posisi design3 */
+  flex: 1; /* Mengatur ukuran tetap gambar */
+  width: 200px; /* Sesuaikan dengan ukuran yang Anda inginkan */
+  height: auto; /* Agar proporsi gambar tetap */
+}
+
+/* Tambahkan media queries untuk memastikan gambar tetap berukuran tetap di berbagai ukuran layar */
+@media (max-width: 768px) {
+  .design3 .design2 {
+    width: 200px; /* Pastikan ukuran tetap pada layar yang lebih kecil */
+    height: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .design3 .design2 {
+    width: 200px; /* Pastikan ukuran tetap pada layar yang lebih kecil */
+    height: auto;
+  }
+}
+
+.photo img {
+  max-width: 100%; /* Make the image responsive */
+  height: auto; /* Maintain the aspect ratio */
+}
+
+#page-container {
+  position: relative;
+  min-height: 100vh;
+}
+
+#content-wrap {
+  padding-bottom: 2.5rem; /* Footer height */
+}
+
+.img {
+  width: 100%;
+  max-width: 100%;
+}
+
+@media all and (max-width: 480px) {
+  .design2 {
+    width: 100%;
+  }
+  .design3 {
+    width: 100%;
+  }
+}
+
+/* App.css */
+.fcontainer1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
